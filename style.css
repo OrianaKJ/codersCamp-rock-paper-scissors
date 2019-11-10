@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'VT323', monospace;
+    font-size: 24px;
+    box-sizing: border-box;
+    /* background: url(img/girl.jpg) no-repeat center center fixed; */
+    color: #000;
+    background-color: rgba(235, 215, 215, 0.9);
+    scroll-behavior: smooth;
+    ;
+}
+
+.gameBoard {
+    /* height: 100vh; */
+    max-width: 1024px;
+    margin: 30px auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.gameBoard__title {
+    font-size: 56px;
+    text-align: center;
+    letter-spacing: 0.2rem;
+}
+
+.gameBoard__description {
+    font-size: 24px;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+    padding: 0 24px;
+}
+
+.gameBoard__players {
+    margin-bottom: 24px;
+}
+
+.gameBoard__scorePanel {
+    width: 250px;
+    height: 100px;
+    border: 5px solid #f88c8c;
+    margin: 0 auto;
+    font-size: 80px;
+}
+
+.gameBoard__icon {
+    width: 200px;
+    border: 5px solid #f88c8c;
+    margin: 50px 16px 16px 24px;
+    cursor: pointer;
+}
+
+.gameBoard__sounds {
+    visibility: hidden;
+}
