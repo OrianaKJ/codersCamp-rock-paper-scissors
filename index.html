@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Game rock, paper, scisors</title>
+    <title>Game rock, paper, scissors</title>
 </head>
 
 <body>
@@ -15,18 +15,19 @@
         <p class="gameBoard__description">Treat yourself and return to the childhood thanks to the iconic game of stone,
             scissors, paper. Choose one of your hands and see if you won or maybe the computer was better this time.
             Great fun guaranteed! Make sure you have a lot of time because this game is addictive</p>
+        <button class="gameBoard__restart-btn">Restart Game</button>
+
         <section class="gameBoard__players">
             <span>User</span>:<span>Computer</span>
         </section>
 
         <section class="gameBoard__scorePanel">
-
             <span class="gameBoard__userScore score">0</span>:<span class="gameBoard__computerScore score">0</span>
         </section>
         <section class="gameBoard__board">
-            <img class="gameBoard__icon" src="img/paper.png" alt="Paper hand">
-            <img class="gameBoard__icon" src="img/rock.png" alt="Rock hand">
-            <img class="gameBoard__icon" src="img/scissors.png" alt="Scissors hand">
+            <img class="gameBoard__icon gameBoard__choice" id="paper" src="img/paper.png" alt="Paper hand">
+            <img class="gameBoard__icon gameBoard__choice" id="rock" src="img/rock.png" alt="Rock hand">
+            <img class="gameBoard__icon gameBoard__choice" id="scissors" src="img/scissors.png" alt="Scissors hand">
         </section>
         <section class="gameBoard__gameText">
             <p class="gameBoard__gameText-msg">Make your move and choose one hand</p>
@@ -34,6 +35,7 @@
         <section class="gameBoard__sounds">
             <audio data-sound="loose" src="sounds/lose.wav" type="audio/wav"></audio>
             <audio data-sound="win" src="sounds/win.wav" type="audio/wav"></audio>
+            <audio data-sound="draw" src="sounds/openhat.wav" type="audio/wav"></audio>
         </section>
     </main>
 
