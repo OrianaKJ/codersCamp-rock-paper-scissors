@@ -76,6 +76,10 @@ html {
     border: 5px solid #f88c8c;
 }
 
+.gameBoard__gameText-msg {
+    font-size: 30px;
+}
+
 .gameBoard__sounds {
     visibility: hidden;
 }
