@@ -84,6 +84,30 @@ html {
     visibility: hidden;
 }
 
+@media screen and (max-width: 414px) {
+    .gameBoard {
+        padding: 0;
+    }
+    .gameBoard__title {
+        margin: 24px;
+        font-size: 48px;
+    }
+    .gameBoard__description {
+        line-height: 1rem;
+    }
+    .gameBoard__scorePanel {
+        height: 50px;
+        font-size: 40px;
+    }
+    .gameBoard__gameText-msg {
+        font-size: 24px;
+    }
+    .gameBoard__icon {
+        width: 114px;
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 360px) {
     .gameBoard {
         margin: 8px;
@@ -95,7 +119,6 @@ html {
     }
     .gameBoard__description {
         font-size: 18px;
-        line-height: 1rem;
         letter-spacing: 0px;
         text-align: justify;
     }
@@ -114,6 +137,5 @@ html {
     }
     .gameBoard__icon {
         width: 94px;
-        margin: 0;
     }
 }
