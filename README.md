@@ -18,5 +18,6 @@ Have fun!
 - message with introduction at the begining
 - custom console.log message
 ![Game custom message](github/console.png)
+- restart button
 - demo version available at this address
 https://orianakj.github.io/codersCamp-rock-paper-scissors/
