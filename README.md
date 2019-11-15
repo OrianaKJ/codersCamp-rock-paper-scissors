@@ -19,4 +19,4 @@ Have fun!
 - custom console.log message
 ![Game custom message](github/console.png)
 - demo version available at this address
-https://orianakj.github.io/codersCamp-portfolio/
+https://orianakj.github.io/codersCamp-rock-paper-scissors/
