@@ -1,3 +1,5 @@
+console.log("Hey there👋. It's nice to see you here 😊. What do you think about this game. Isn't it awesome❓❗ If you would like to shere with me your opinion  catch my at my social media channels or send me a message: oriana.koziorynska@gmail.com 💬. Have a nice day and till the next time👋");
+
 const choices = document.querySelectorAll('.gameBoard__choice');
 let userScore = 0;
 let computerScore = 0;
