@@ -11,61 +11,33 @@ const audioW = document.querySelector('audio[data-sound="win"]');
 const audioD = document.querySelector('audio[data-sound="draw"]')
 const restartButton = document.querySelector('.gameBoard__restart-btn')
 
-function playGame(e) {
+const playGame = e => {
     const userMove = e.target.id;
     const computerMove = getComputerChoice();
     checkWinner(userMove, computerMove);
     displayScore(userScore, computerScore);
 }
 
-function getComputerChoice() {
-    const moves = ['rock', 'paper', 'scissors'];
+const getComputerChoice = moves => {
+    moves = ['rock', 'paper', 'scissors'];
     const computer = moves[Math.floor(Math.random() * moves.length)];
     return computer;
 }
 
-function checkWinner(userMove, computerMove) {
+const checkWinner = (userMove, computerMove) => {
     if (userMove === computerMove) {
         gameMsg.innerHTML = `Your move is ${userMove}, and compuer move is ${computerMove}. It's a draw.`;
         audioD.currentTime = 0;
         audioD.play();
     }
-
-    if (userMove === 'paper' && computerMove === 'scissors') {
+    if ((userMove === 'rock' && computerMove == 'scissors') || (userMove === 'paper' && computerMove === 'rock') || (userMove === 'scissors' && computerMove === 'paper')) {
+        gameMsg.innerHTML = `Your move is ${userMove}, and computer move is ${computerMove}. You win!`
+        userScore++;
+        audioW.currentTime = 0;
+        audioW.play();
+    }
+    if ((userMove === 'paper' && computerMove === 'scissors') || (userMove === 'rock' && computerMove === 'paper') || (userMove === 'scissors' && computerMove === 'rock')) {
         gameMsg.innerHTML = `Your move is ${userMove}, and computer move is ${computerMove}. Computer win`;
-        computerScore++;
-        audioL.currentTime = 0;
-        audioL.play();
-    }
-    if (userMove === 'paper' && computerMove === 'rock') {
-        gameMsg.innerHTML = `Your move is ${userMove}, and computer move is ${computerMove}. You win!`
-        userScore++;
-        audioW.currentTime = 0;
-        audioW.play();
-    }
-    if (userMove === 'rock' && computerMove === 'scissors') {
-        gameMsg.innerHTML = `Your move is ${userMove}, and computer move is ${computerMove}. You win!`
-        userScore++;
-        audioW.currentTime = 0;
-        audioW.play();
-    }
-
-    if (userMove === 'rock' && computerMove === 'paper') {
-        gameMsg.innerHTML = `Your move is ${userMove}, and computer move is ${computerMove}. Computer win.`;
-        computerScore++;
-        audioL.currentTime = 0;
-        audioL.play();
-    }
-    if (userMove === 'scissors' && computerMove === 'paper') {
-        gameMsg.innerHTML = `Your move is ${userMove}, and computer move is ${computerMove}. You win!`
-        userScore++;
-        audioW.currentTime = 0;
-        audioW.play();
-    }
-
-
-    if (userMove === 'scissors' && computerMove === 'rock') {
-        gameMsg.innerHTML = `Your move is ${userMove}, and computer move is ${computerMove}. Computer win.`;
         computerScore++;
         audioL.currentTime = 0;
         audioL.play();
@@ -73,12 +45,12 @@ function checkWinner(userMove, computerMove) {
     return [userScore, computerScore]
 }
 
-function displayScore() {
+const displayScore = () => {
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
 }
 
-function restartGame() {
+const restartGame = () => {
     userScoreSpan.innerHTML = "0";
     computerScoreSpan.innerHTML = "0";
     userScore = 0;
